@@ -1,4 +1,5 @@
 import client from '../elastic'
+// import pgConnection from '../postgres'
 
 export default async function getEventsAndParticipants(req: any, res: any) {
   try {
@@ -70,3 +71,14 @@ export default async function getEventsAndParticipants(req: any, res: any) {
     }
   }
 }
+
+
+// CONNECTION TO POSTGRES
+// export default async function getEventsAndParticipants(req: any, res: any) {
+//   try {
+//     await pgConnection.connect()
+//     const { rows } = await pgConnection.query('SELECT * FROM test')
+//     console.log(rows)
+//   } catch (err) {
+//     console.log(err)
+//   }
